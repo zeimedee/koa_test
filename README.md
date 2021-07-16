@@ -2,7 +2,7 @@
 A simple web service to convert currencies.
 it is able to convert the Ghanaian Cedi,Nigerian Naira and Kenyan Shilling from any one to the other
 
-the server accepts a POST request with the amount to the converted, the currency and the target currency to be converted to and returns the converted amount 
+the server accepts an HTTP POST request with the amount to the converted, the currency and the target currency to be converted to and returns the converted amount 
 
  the service is started with :
  ```bash

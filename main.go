@@ -8,7 +8,7 @@ import (
 )
 
 func Handler(app *fiber.App) {
-	app.Post("/api/ convert", handlers.Convert)
+	app.Post("/api/convert", handlers.Convert)
 }
 func main() {
 	app := fiber.New()

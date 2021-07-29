@@ -12,13 +12,20 @@ import (
 func Handler(app *fiber.App) {
 	app.Post("/api/convert", handlers.Convert)
 }
+
+type Loggs struct {
+	Url  string
+	Meth string
+	Code string
+}
+
 func main() {
 	app := fiber.New()
-	Handler(app)
-
 	app.Use(logger.New(logger.Config{
-		Format: "${url} ${status} - ${method}/n",
+		Format: "${ip}${url} - ${status} - ${method}\n",
 		Output: os.Stdout,
 	}))
+	Handler(app)
+
 	log.Fatal(app.Listen(":3000"))
 }

@@ -13,12 +13,6 @@ func Handler(app *fiber.App) {
 	app.Post("/api/convert", handlers.Convert)
 }
 
-type Loggs struct {
-	Url  string
-	Meth string
-	Code string
-}
-
 func main() {
 	app := fiber.New()
 	app.Use(logger.New(logger.Config{
